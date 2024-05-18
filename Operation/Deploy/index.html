@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JVM、JRE、JDK | 名为Tom的Cat</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.ffb53a14.css" as="style"><link rel="preload" href="/assets/js/app.f5ccd78e.js" as="script"><link rel="preload" href="/assets/js/2.3026bd70.js" as="script"><link rel="preload" href="/assets/js/1.036a9119.js" as="script"><link rel="preload" href="/assets/js/56.bc249875.js" as="script"><link rel="prefetch" href="/assets/js/10.c3c77ba4.js"><link rel="prefetch" href="/assets/js/11.b6870bd2.js"><link rel="prefetch" href="/assets/js/12.8c3b4278.js"><link rel="prefetch" href="/assets/js/13.8a074926.js"><link rel="prefetch" href="/assets/js/14.9ebfdeab.js"><link rel="prefetch" href="/assets/js/15.9f177ef0.js"><link rel="prefetch" href="/assets/js/16.0f87e4e4.js"><link rel="prefetch" href="/assets/js/17.c8d40c91.js"><link rel="prefetch" href="/assets/js/18.823986bb.js"><link rel="prefetch" href="/assets/js/19.1dbd01b4.js"><link rel="prefetch" href="/assets/js/20.c92124d1.js"><link rel="prefetch" href="/assets/js/21.65581db4.js"><link rel="prefetch" href="/assets/js/22.a0a95344.js"><link rel="prefetch" href="/assets/js/23.983242aa.js"><link rel="prefetch" href="/assets/js/24.8773b7ba.js"><link rel="prefetch" href="/assets/js/25.d6db7cf8.js"><link rel="prefetch" href="/assets/js/26.3157726d.js"><link rel="prefetch" href="/assets/js/27.acdaa45e.js"><link rel="prefetch" href="/assets/js/28.fcde6504.js"><link rel="prefetch" href="/assets/js/29.3d5148c6.js"><link rel="prefetch" href="/assets/js/3.061348df.js"><link rel="prefetch" href="/assets/js/30.89e3f165.js"><link rel="prefetch" href="/assets/js/31.8a841483.js"><link rel="prefetch" href="/assets/js/32.6a4e3ee4.js"><link rel="prefetch" href="/assets/js/33.a6ec59af.js"><link rel="prefetch" href="/assets/js/34.5b8cfeeb.js"><link rel="prefetch" href="/assets/js/35.1cc9fb24.js"><link rel="prefetch" href="/assets/js/36.74dc1b4d.js"><link rel="prefetch" href="/assets/js/37.83afbf6d.js"><link rel="prefetch" href="/assets/js/38.bc37ce7c.js"><link rel="prefetch" href="/assets/js/39.5117bfa7.js"><link rel="prefetch" href="/assets/js/4.938e6769.js"><link rel="prefetch" href="/assets/js/40.85d9bec8.js"><link rel="prefetch" href="/assets/js/41.ee2e648e.js"><link rel="prefetch" href="/assets/js/42.67735005.js"><link rel="prefetch" href="/assets/js/43.bba6e36a.js"><link rel="prefetch" href="/assets/js/44.3341b866.js"><link rel="prefetch" href="/assets/js/45.ae31f969.js"><link rel="prefetch" href="/assets/js/46.1eb59549.js"><link rel="prefetch" href="/assets/js/47.f2f46474.js"><link rel="prefetch" href="/assets/js/48.e23f9518.js"><link rel="prefetch" href="/assets/js/49.29a53d24.js"><link rel="prefetch" href="/assets/js/5.02fdfc6c.js"><link rel="prefetch" href="/assets/js/50.f5132425.js"><link rel="prefetch" href="/assets/js/51.b6bb7670.js"><link rel="prefetch" href="/assets/js/52.4557dff9.js"><link rel="prefetch" href="/assets/js/53.8a97ad61.js"><link rel="prefetch" href="/assets/js/54.ed107a2b.js"><link rel="prefetch" href="/assets/js/55.aa9e1829.js"><link rel="prefetch" href="/assets/js/57.1e7013ee.js"><link rel="prefetch" href="/assets/js/58.a0429fec.js"><link rel="prefetch" href="/assets/js/59.deeabf98.js"><link rel="prefetch" href="/assets/js/6.cf391ec0.js"><link rel="prefetch" href="/assets/js/60.7797498f.js"><link rel="prefetch" href="/assets/js/7.c229d94e.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.5e19b665.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ffb53a14.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">名为Tom的Cat</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Basis/Basis/" class="nav-link">
+  Java基础
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Object/" class="nav-link">
+  面向对象
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/CommonClass/" class="nav-link">
+  常用类API
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Enumeration/" class="nav-link">
+  枚举
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Collection/" class="nav-link">
+  集合框架
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Mechanism/" class="nav-link">
+  Java机制
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Network/" class="nav-link">
+  网络编程
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IO流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/IO/" class="nav-link">
+  IO
+</a></li></ul></li><li class="dropdown-item"><h4>
+          并发编程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Concurrent/" class="nav-link">
+  并发编程
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JVM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/JVM/" class="nav-link">
+  JVM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          新特性
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Identity/Stream/" class="nav-link">
+  Stream流
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaWeb" class="dropdown-title"><span class="title">JavaWeb</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaWeb" class="mobile-dropdown-title"><span class="title">JavaWeb</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/JavaWeb/Basis/" class="nav-link">
+  基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Framework/Mybatis/" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/MybatisPlus/" class="nav-link">
+  MybatisPlus
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringMVC/" class="nav-link">
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringBoot/" class="nav-link">
+  SpringBoot
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="核心技术" class="dropdown-title"><span class="title">核心技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="核心技术" class="mobile-dropdown-title"><span class="title">核心技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Core/Algorithm/" class="nav-link">
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/SQL/Mysql/" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Operation/Linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/Operation/Building/" class="nav-link">
+  环境搭建
+</a></li><li class="dropdown-item"><!----> <a href="/Operation/Deploy/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发工具" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/Idea/" class="nav-link">
+  IDEA
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/Maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/Git/" class="nav-link">
+  GIT
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Front/VuePress/" class="nav-link">
+  VuePress
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/TheThunderCalls/thethundercalls.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Basis/Basis/" class="nav-link">
+  Java基础
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Object/" class="nav-link">
+  面向对象
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/CommonClass/" class="nav-link">
+  常用类API
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Enumeration/" class="nav-link">
+  枚举
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Collection/" class="nav-link">
+  集合框架
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Mechanism/" class="nav-link">
+  Java机制
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Network/" class="nav-link">
+  网络编程
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IO流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/IO/" class="nav-link">
+  IO
+</a></li></ul></li><li class="dropdown-item"><h4>
+          并发编程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Concurrent/" class="nav-link">
+  并发编程
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JVM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/JVM/" class="nav-link">
+  JVM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          新特性
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Identity/Stream/" class="nav-link">
+  Stream流
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaWeb" class="dropdown-title"><span class="title">JavaWeb</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaWeb" class="mobile-dropdown-title"><span class="title">JavaWeb</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/JavaWeb/Basis/" class="nav-link">
+  基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Framework/Mybatis/" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/MybatisPlus/" class="nav-link">
+  MybatisPlus
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringMVC/" class="nav-link">
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringBoot/" class="nav-link">
+  SpringBoot
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="核心技术" class="dropdown-title"><span class="title">核心技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="核心技术" class="mobile-dropdown-title"><span class="title">核心技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Core/Algorithm/" class="nav-link">
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/SQL/Mysql/" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Operation/Linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/Operation/Building/" class="nav-link">
+  环境搭建
+</a></li><li class="dropdown-item"><!----> <a href="/Operation/Deploy/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发工具" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/Idea/" class="nav-link">
+  IDEA
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/Maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/Git/" class="nav-link">
+  GIT
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Front/VuePress/" class="nav-link">
+  VuePress
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/TheThunderCalls/thethundercalls.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="jvm、jre、jdk"><a href="#jvm、jre、jdk" class="header-anchor">#</a> JVM、JRE、JDK</h2> <h3 id="jvm"><a href="#jvm" class="header-anchor">#</a> JVM</h3> <p>​	Java Virtual Machine，即Java虚拟机，运行在操作系统之上，存在于内存中，与内存打交道，与硬件没有直接交互，是Java语言实现跨平台的核心</p> <p>​	JVM是一种抽象、虚拟出来的计算机，和实际的计算机一样，它具有指令集并使用不同的存储区域，负责执行指令，还要管理数据，内存和寄存器等</p> <p>​	Java虚拟机是JRE的一部分，它是整个java实现跨平台的最核心的部分，负责解释执行字节码文件，是可运行java字节码文件的虚拟计算机。所有平台上的JVM向编译器提供相同的接口，而编译器只需要面向虚拟机，生成虚拟机能识别的代码，然后由虚拟机来解释执行</p> <p>​	JVM主要负责运行Java编译器编译后的字节码文件(.class文件)。这些字节码只面向JVM，不同平台的JVM都是不同的，但是它们都提供了相同的接口。JVM是Java程序跨平台的关键部分，只要为不同平台实现了相应的虚拟机，编译后的Java字节码就可以在该平台上运行。把字节码编译成具体平台上的机器码执行。JVM自己无法执行，必须联合JRE中的Java基础和核心类库才能使用</p> <h3 id="jre"><a href="#jre" class="header-anchor">#</a> JRE</h3> <p>​	Java Runtime Environment，即Java运行环境，支持Java程序运行的标准环境，包含JVM标准实现及Java核心类库。JRE中包含了JVM，runtime class libraries和Java application launcher，这些是运行Java程序的必要组件。通过它，Java的开发者才得以将自己开发的程序发布到用户手中，让用户使用。</p> <p>jre1.8目录包含：</p> <p>​	bin：有java.exe但没有javac.exe，无法编译Java程序，但可以运行Java程序 [可以理解为JVM]</p> <p>​	lib：Java基础和核心类库，如rt.jar，也包含JVM运行时需要的类库</p> <h3 id="jdk"><a href="#jdk" class="header-anchor">#</a> JDK</h3> <p>​	Java Development Kit，即Java开发工具包，是一个编写Java应用程序的开发环境，是Java的核心所在。</p> <p>​	JDK是整个Java的核心，包括了JRE(Java运行环境)，同时在jdk文件夹bin目录中包含一些Java开发工具(例如：jconsole、javac、java、javadoc、native2ascii、jar等)。JDK = JRE + Java开发工具(编译器、反编译器、调试器等)</p> <p>jdk1.8目录包含：</p> <p>​	bin：一堆exe文件，可执行的开发工具</p> <p>​	jre：java运行环境，包括JVM + Java基础和核心类库</p> <p>​	lib：本地资源库，包含dt.jar + tools.jar的常用类库、开发依赖包</p> <p>​	include：Java和JVM交互用的头文件</p> <h2 id="class文件、jar包和war包"><a href="#class文件、jar包和war包" class="header-anchor">#</a> Class文件、Jar包和war包</h2> <h3 id="class文件"><a href="#class文件" class="header-anchor">#</a> class文件</h3> <h4 id="生成方案"><a href="#生成方案" class="header-anchor">#</a> 生成方案</h4> <p>​	class文件是通过编译Java源代码生成的，它包含了字节码和其他与类有关的元数据信息</p> <h5 id="使用java编译器-javac"><a href="#使用java编译器-javac" class="header-anchor">#</a> 使用Java编译器(javac)</h5> <p>​	Java编译器(javac) 是Java开发工具包(JDK)的一部分，它可以将Java源代码编译成字节码文件(.class)。我们可以通过在命令行中运行javac命令来生成class文件。</p> <h5 id="使用java编译器提供的api"><a href="#使用java编译器提供的api" class="header-anchor">#</a> 使用Java编译器提供的API</h5> <p>​	JavaCompiler 类的 run() 编译指定的Java源文件</p> <h5 id="使用java反射api"><a href="#使用java反射api" class="header-anchor">#</a> 使用Java反射API</h5> <p>​	Java反射API提供了一种动态操作类和对象的机制，它可以在运行时生成类的实例、调用类的方法和访问类的字段等。我们可以使用Java反射API来动态生成一个Java类的字节码，并将其保存为class文件</p> <h5 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h5> <p>​	生成Java class文件的两种方案：使用Java编译器和Java反射API。使用Java编译器可以轻松地将Java源代码编译成class文件，而使用Java反射API可以在运行时动态生成类的字节码并保存为class文件。</p> <h4 id="执行class文件"><a href="#执行class文件" class="header-anchor">#</a> 执行class文件</h4></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.f5ccd78e.js" defer></script><script src="/assets/js/2.3026bd70.js" defer></script><script src="/assets/js/1.036a9119.js" defer></script><script src="/assets/js/56.bc249875.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>控制执行流程 | 名为Tom的Cat</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.ffb53a14.css" as="style"><link rel="preload" href="/assets/js/app.f5ccd78e.js" as="script"><link rel="preload" href="/assets/js/2.3026bd70.js" as="script"><link rel="preload" href="/assets/js/1.036a9119.js" as="script"><link rel="preload" href="/assets/js/23.983242aa.js" as="script"><link rel="prefetch" href="/assets/js/10.c3c77ba4.js"><link rel="prefetch" href="/assets/js/11.b6870bd2.js"><link rel="prefetch" href="/assets/js/12.8c3b4278.js"><link rel="prefetch" href="/assets/js/13.8a074926.js"><link rel="prefetch" href="/assets/js/14.9ebfdeab.js"><link rel="prefetch" href="/assets/js/15.9f177ef0.js"><link rel="prefetch" href="/assets/js/16.0f87e4e4.js"><link rel="prefetch" href="/assets/js/17.c8d40c91.js"><link rel="prefetch" href="/assets/js/18.823986bb.js"><link rel="prefetch" href="/assets/js/19.1dbd01b4.js"><link rel="prefetch" href="/assets/js/20.c92124d1.js"><link rel="prefetch" href="/assets/js/21.65581db4.js"><link rel="prefetch" href="/assets/js/22.a0a95344.js"><link rel="prefetch" href="/assets/js/24.8773b7ba.js"><link rel="prefetch" href="/assets/js/25.d6db7cf8.js"><link rel="prefetch" href="/assets/js/26.3157726d.js"><link rel="prefetch" href="/assets/js/27.acdaa45e.js"><link rel="prefetch" href="/assets/js/28.fcde6504.js"><link rel="prefetch" href="/assets/js/29.3d5148c6.js"><link rel="prefetch" href="/assets/js/3.061348df.js"><link rel="prefetch" href="/assets/js/30.89e3f165.js"><link rel="prefetch" href="/assets/js/31.8a841483.js"><link rel="prefetch" href="/assets/js/32.6a4e3ee4.js"><link rel="prefetch" href="/assets/js/33.a6ec59af.js"><link rel="prefetch" href="/assets/js/34.5b8cfeeb.js"><link rel="prefetch" href="/assets/js/35.1cc9fb24.js"><link rel="prefetch" href="/assets/js/36.74dc1b4d.js"><link rel="prefetch" href="/assets/js/37.83afbf6d.js"><link rel="prefetch" href="/assets/js/38.bc37ce7c.js"><link rel="prefetch" href="/assets/js/39.5117bfa7.js"><link rel="prefetch" href="/assets/js/4.938e6769.js"><link rel="prefetch" href="/assets/js/40.85d9bec8.js"><link rel="prefetch" href="/assets/js/41.ee2e648e.js"><link rel="prefetch" href="/assets/js/42.67735005.js"><link rel="prefetch" href="/assets/js/43.bba6e36a.js"><link rel="prefetch" href="/assets/js/44.3341b866.js"><link rel="prefetch" href="/assets/js/45.ae31f969.js"><link rel="prefetch" href="/assets/js/46.1eb59549.js"><link rel="prefetch" href="/assets/js/47.f2f46474.js"><link rel="prefetch" href="/assets/js/48.e23f9518.js"><link rel="prefetch" href="/assets/js/49.29a53d24.js"><link rel="prefetch" href="/assets/js/5.02fdfc6c.js"><link rel="prefetch" href="/assets/js/50.f5132425.js"><link rel="prefetch" href="/assets/js/51.b6bb7670.js"><link rel="prefetch" href="/assets/js/52.4557dff9.js"><link rel="prefetch" href="/assets/js/53.8a97ad61.js"><link rel="prefetch" href="/assets/js/54.ed107a2b.js"><link rel="prefetch" href="/assets/js/55.aa9e1829.js"><link rel="prefetch" href="/assets/js/56.bc249875.js"><link rel="prefetch" href="/assets/js/57.1e7013ee.js"><link rel="prefetch" href="/assets/js/58.a0429fec.js"><link rel="prefetch" href="/assets/js/59.deeabf98.js"><link rel="prefetch" href="/assets/js/6.cf391ec0.js"><link rel="prefetch" href="/assets/js/60.7797498f.js"><link rel="prefetch" href="/assets/js/7.c229d94e.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.5e19b665.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ffb53a14.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">名为Tom的Cat</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Basis/Basis/" class="nav-link router-link-active">
+  Java基础
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Object/" class="nav-link">
+  面向对象
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/CommonClass/" class="nav-link">
+  常用类API
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Enumeration/" class="nav-link">
+  枚举
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Collection/" class="nav-link">
+  集合框架
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Mechanism/" class="nav-link">
+  Java机制
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Network/" class="nav-link">
+  网络编程
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IO流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/IO/" class="nav-link">
+  IO
+</a></li></ul></li><li class="dropdown-item"><h4>
+          并发编程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Concurrent/" class="nav-link">
+  并发编程
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JVM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/JVM/" class="nav-link">
+  JVM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          新特性
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Identity/Stream/" class="nav-link">
+  Stream流
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaWeb" class="dropdown-title"><span class="title">JavaWeb</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaWeb" class="mobile-dropdown-title"><span class="title">JavaWeb</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/JavaWeb/Basis/" class="nav-link">
+  基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Framework/Mybatis/" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/MybatisPlus/" class="nav-link">
+  MybatisPlus
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringMVC/" class="nav-link">
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringBoot/" class="nav-link">
+  SpringBoot
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="核心技术" class="dropdown-title"><span class="title">核心技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="核心技术" class="mobile-dropdown-title"><span class="title">核心技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Core/Algorithm/" class="nav-link">
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/SQL/Mysql/" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Operation/Linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/Operation/Building/" class="nav-link">
+  环境搭建
+</a></li><li class="dropdown-item"><!----> <a href="/Operation/Deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发工具" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/Idea/" class="nav-link">
+  IDEA
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/Maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/Git/" class="nav-link">
+  GIT
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Front/VuePress/" class="nav-link">
+  VuePress
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/TheThunderCalls/thethundercalls.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Java" class="dropdown-title"><span class="title">Java</span> <span class="arrow down"></span></button> <button type="button" aria-label="Java" class="mobile-dropdown-title"><span class="title">Java</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Basis/Basis/" class="nav-link router-link-active">
+  Java基础
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Object/" class="nav-link">
+  面向对象
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/CommonClass/" class="nav-link">
+  常用类API
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Enumeration/" class="nav-link">
+  枚举
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Collection/" class="nav-link">
+  集合框架
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Mechanism/" class="nav-link">
+  Java机制
+</a></li><li class="dropdown-subitem"><a href="/Java/Basis/Network/" class="nav-link">
+  网络编程
+</a></li></ul></li><li class="dropdown-item"><h4>
+          IO流
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/IO/" class="nav-link">
+  IO
+</a></li></ul></li><li class="dropdown-item"><h4>
+          并发编程
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Concurrent/" class="nav-link">
+  并发编程
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JVM
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/JVM/" class="nav-link">
+  JVM
+</a></li></ul></li><li class="dropdown-item"><h4>
+          新特性
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Java/Identity/Stream/" class="nav-link">
+  Stream流
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaWeb" class="dropdown-title"><span class="title">JavaWeb</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaWeb" class="mobile-dropdown-title"><span class="title">JavaWeb</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/JavaWeb/Basis/" class="nav-link">
+  基础
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="框架" class="dropdown-title"><span class="title">框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="框架" class="mobile-dropdown-title"><span class="title">框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Framework/Mybatis/" class="nav-link">
+  Mybatis
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/MybatisPlus/" class="nav-link">
+  MybatisPlus
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringMVC/" class="nav-link">
+  SpringMVC
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringBoot/" class="nav-link">
+  SpringBoot
+</a></li><li class="dropdown-item"><!----> <a href="/Framework/SpringCloud/" class="nav-link">
+  SpringCloud
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="核心技术" class="dropdown-title"><span class="title">核心技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="核心技术" class="mobile-dropdown-title"><span class="title">核心技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Core/Algorithm/" class="nav-link">
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Design/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow down"></span></button> <button type="button" aria-label="数据库" class="mobile-dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/SQL/Mysql/" class="nav-link">
+  MySQL
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="运维" class="dropdown-title"><span class="title">运维</span> <span class="arrow down"></span></button> <button type="button" aria-label="运维" class="mobile-dropdown-title"><span class="title">运维</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Operation/Linux/" class="nav-link">
+  Linux基础
+</a></li><li class="dropdown-item"><!----> <a href="/Operation/Building/" class="nav-link">
+  环境搭建
+</a></li><li class="dropdown-item"><!----> <a href="/Operation/Deploy/" class="nav-link">
+  部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发工具" class="mobile-dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Tool/Idea/" class="nav-link">
+  IDEA
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/Maven/" class="nav-link">
+  Maven
+</a></li><li class="dropdown-item"><!----> <a href="/Tool/Git/" class="nav-link">
+  GIT
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Front/VuePress/" class="nav-link">
+  VuePress
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/TheThunderCalls/thethundercalls.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Java/Basis/Basis/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/Java/Basis/Basis/Operator.html" class="sidebar-link">操作符</a></li><li><a href="/Java/Basis/Basis/ExecutionProcess.html" aria-current="page" class="active sidebar-link">控制执行流程</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#boolean-expression" class="sidebar-link">boolean-expression</a></li><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#if-else-if-else" class="sidebar-link">if - else if - else</a></li><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#switch" class="sidebar-link">switch</a></li><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#for" class="sidebar-link">for</a></li><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#while" class="sidebar-link">while</a></li><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#do-while" class="sidebar-link">do...while</a></li><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#foreach" class="sidebar-link">foreach</a></li><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#return" class="sidebar-link">return</a></li><li class="sidebar-sub-header"><a href="/Java/Basis/Basis/ExecutionProcess.html#break-continue" class="sidebar-link">break &amp; continue</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="控制执行流程"><a href="#控制执行流程" class="header-anchor">#</a> 控制执行流程</h1> <h2 id="boolean-expression"><a href="#boolean-expression" class="header-anchor">#</a> boolean-expression</h2> <p>结果为 true 或者 false 的表达式，例如 a==b 、 a.equal(b)...</p> <h2 id="if-else-if-else"><a href="#if-else-if-else" class="header-anchor">#</a> if - else if - else</h2> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">boolean</span><span class="token operator">-</span>expression1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    statement1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">boolean</span><span class="token operator">-</span>expression2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    statement2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    statement3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果 boolean-expression1 为 true，则执行statement1；否则，如果 boolean-expression2 为 true，则执行statement2；否则执行statement3。</p> <h2 id="switch"><a href="#switch" class="header-anchor">#</a> switch</h2> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">-</span>selector<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token keyword">int</span><span class="token operator">-</span>value1<span class="token operator">:</span>
+        statement1<span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token keyword">int</span><span class="token operator">-</span>value2<span class="token operator">:</span>
+        statement2<span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+        statement3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>其中，int-selector是一个能产生整数值的表达式，switch将这个表达式的结果与每个int-value值相比较。若有相符的，则执行对应的statement；否则，执行default后的statement。</p> <p>int-selector：</p> <ul><li>在JDK1.5之前，只支持byte、short、char、int类型</li> <li>在JDK1.5中，增加了枚举类与byte、short、char、int的包装类，对四个包装类的支持是因为java编译器在底层手动进行拆箱，而对枚举类的支持是因为枚举类有一个ordinal方法，该方法实际上是一个int类型的数值</li> <li>在JDK1.7中，支持String类型，但实际上String类型有一个hashCode算法，结果也是int类型。而byte、short、char类型可以在不损失精度的情况下向上转型成int类型</li></ul> <p>​	总的来说，int-selector最终都只转换为int与int-value值进行比较</p> <p>break:</p> <p>​	如果 case 后对应的代码中没有 break; ，则当找到与int-selector相符的 int-value时，当前对应的statement以及之后的所有statement都将执行。</p> <h2 id="for"><a href="#for" class="header-anchor">#</a> for</h2> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">for</span> <span class="token punctuation">(</span>initialization<span class="token punctuation">;</span> <span class="token keyword">boolean</span><span class="token operator">-</span>expression<span class="token punctuation">;</span> step<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// statement</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>第一步： 对变量初始化，可以在initialization中创建新的变量</p> <p>第二步：判断布尔表达式boolean-expression，如果表达式结果为true，则执行代码块statement；如果为false，则循环结束</p> <p>第三步：执行statement完成后，执行step运算，一般是对循环变量进行加/减操作</p> <p>第四步：在执行step之后，继续判断布尔表达式，按照第二步依次执行下去</p> <h2 id="while"><a href="#while" class="header-anchor">#</a> while</h2> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">while</span> <span class="token punctuation">(</span>booleam<span class="token operator">-</span>expression<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// statement</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>当执行到 while 时，先判断布尔表达式 booleam-expression，如果该值返回 true，则执行 statement；否则，当前循环结束。在执行完statement之后，继续判断布尔表达式，依次循环</p> <h2 id="do-while"><a href="#do-while" class="header-anchor">#</a> do...while</h2> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">do</span> <span class="token punctuation">{</span>
+	<span class="token comment">// statement</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token keyword">boolean</span><span class="token operator">-</span>expression<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>do...while 和 while 的区别就是：do...while 先执行一次statement，再判断布尔表达式。即：无论布尔表达式结果为什么，do...while至少执行一次statement</p> <h2 id="foreach"><a href="#foreach" class="header-anchor">#</a> foreach</h2> <div class="language- extra-class"><pre class="language-text"><code>for (数据类型 变量 : 集合变量) {
+	// statement
+}
+</code></pre></div><div class="custom-block danger"><p class="custom-block-title">注意</p> <p>​	在Java 5中，引入了一种主要用于数组和集合遍历的增强型for循环，我们可以认为它是普通for循环的增强版</p> <p>​	主要是用于处理数组或实现了 Iterable 接口的集合中的元素，而不必指定数组或集合的下标</p> <p>​	foreach 循环处理集合时，底层使用的是 Iterable 迭代器，只用于遍历元素，而不能修改其中的元素</p></div> <p>数据类型： 应和数组|集合变量中保存的元素的数据类型一致</p> <p>变量： 声明的一个变量，改变量的作用域范围为foreach循环</p> <p>该循环是，从前往后正向遍历，每次遍历集合中的其中一个元素，即当前元素【变量】</p> <h2 id="return"><a href="#return" class="header-anchor">#</a> return</h2> <p>return 关键字有两种作用：a. 指定方法的返回值；b. 退出当前方法，不再继续执行当前方法之后的 statement</p> <h2 id="break-continue"><a href="#break-continue" class="header-anchor">#</a> break &amp; continue</h2> <p>在任何循环语句的主体部分，都可以使用 break 或者 continue 控制循环的流程。</p> <p>break 意味着强制退出循环，当前循环结束</p> <p>continue 意味着停止执行当前的循环，直接执行下一次循环</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Java/Basis/Basis/Operator.html" class="prev">
+        操作符
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.f5ccd78e.js" defer></script><script src="/assets/js/2.3026bd70.js" defer></script><script src="/assets/js/1.036a9119.js" defer></script><script src="/assets/js/23.983242aa.js" defer></script>
+  </body>
+</html>
